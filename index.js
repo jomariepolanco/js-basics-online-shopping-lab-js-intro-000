@@ -43,7 +43,7 @@ function viewCart() {
   }
   return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}, and ${cart[1].itemName} at $${cart[1].itemPrice} ${threePlusItems}.`
 }
-
+}
 
 function total() {
   // write your code here
