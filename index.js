@@ -73,7 +73,6 @@ if (index > - 1) {
 }
 //if not, return "that item is not in your cart"
 
-}
 
 function placeOrder(cardNumber) {
   // write your code here
