@@ -59,13 +59,17 @@ return sum;
 function removeFromCart(item) {
   // write your code here
 //if item is there, remove from cart destructively
+const itemName = []
 for (let i = 0; i < cart.length; i++) {
-  if (item === cart[i].itemName) {
-    cart.splice(i,1);
-    return cart;
-  } else {
-    console.log("That item is not in your cart.")
-  }
+  itemName.push(cart[i].itemName)
+}
+const index = itemName.indexOf(item)
+if (index > - 1) {
+  cart.splice(index,1)
+  return cart
+} else {
+  return `That item is not in your cart.`
+}
 }
 //if not, return "that item is not in your cart"
 
