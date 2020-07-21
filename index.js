@@ -43,6 +43,7 @@ function viewCart() {
     }
   var threePlusItems = `In your cart, you have ${cartData.join(', ')}, and ${Object.keys(cart[cart.length - 1])} at $${Object.values(cart[cart.length - 1])}.`
   }
+  console.log(threePlusItems)
 }
 
 
