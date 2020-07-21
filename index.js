@@ -47,11 +47,13 @@ function viewCart() {
 
 function total() {
   // write your code here
-var totalSum = 0;
+let numbers = []
+let sum = 0
 for (let i = 0; i < cart.length; i++) {
-  totalSum += cart[i].itemPrice;
+  numbers.push(cart[i].itemPrice)
+    sum += numbers[i]
 }
-console.log(total);
+return sum;
 }
 
 function removeFromCart(item) {
