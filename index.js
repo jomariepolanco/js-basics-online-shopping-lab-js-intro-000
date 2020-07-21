@@ -67,14 +67,13 @@ for (let i = 0; i < cart.length; i++) {
   if (item === cart[i].itemName) {
     cart.splice(i,1);
     return cart;
+  } else {
+    return "That item is not in your cart."
   }
 }
 //if not, return "that item is not in your cart"
-else {
-  return "That item is not in your cart."
+
 }
-}
-  }
 
 function placeOrder(cardNumber) {
   // write your code here
