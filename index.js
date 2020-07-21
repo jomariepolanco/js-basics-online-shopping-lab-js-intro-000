@@ -28,24 +28,20 @@ return `${cart[cart.length - 1].itemName} has been added to your cart.`
 
 function viewCart() {
   // write your code here
-  //if cart is empty, return "Your shopping cart is empty"
-
   if (cart.length === 0) {
-    return "Your shopping cart is empty."
-    //1 item in cart
+    console.log("Your shopping cart is empty.")
   } else if (cart.length === 1) {
-    return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`
-    //2 items in cart
+    var oneItem = `In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])}.`
+    console.log(oneItem)
   } else if (cart.length === 2) {
-    return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}, and ${cart[1].itemName} at $${cart[1].itemPrice}.`
-    //3+ items in cart
+    var twoItems = `In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])} and ${Object.keys(cart[1])} at $${Object.values(cart[1])}.`
+    console.log(twoItems)
   } else {
-    //loop through cart
-    var plusThreeItems = "";
-    for (var i = 0; i < cart.length; i++) {
-      plusThreeItems = `In your cart, you have ${cart[i].itemName} at $${cart[i].itemPrice}, `;
+    var cartData = [];
+    for (var i = 0; i < cart.length - 1; i++) {
+      cartData.push(`${Object.keys(cart[i])} at $${Object.values(cart[i])}`)
     }
-    console.log(`${plusThreeItems}, and ${cart[cart.length].itemName} at $${cart[cart.length].itemPrice}.`);
+  var threePlusItems = `In your cart, you have ${cartData.join(', ')}, and ${Object.keys(cart[cart.length - 1])} at $${Object.values(cart[cart.length - 1])}.`
   }
 }
 
