@@ -62,6 +62,18 @@ console.log(total);
 
 function removeFromCart(item) {
   // write your code here
+//if item is there, remove from cart destructively
+for (let i = 0; i < cart.length; i++) {
+  if (item === cart[i].itemName) {
+    cart.splice(i,1);
+    return cart;
+  }
+}
+//if not, return "that item is not in your cart"
+else {
+  return "That item is not in your cart."
+}
+}
   }
 
 function placeOrder(cardNumber) {
