@@ -45,7 +45,7 @@ function viewCart() {
   }
   console.log(threePlusItems)
 }
-
+viewCart()
 
 
 function total() {
